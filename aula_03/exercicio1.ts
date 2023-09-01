@@ -6,6 +6,8 @@ namespace exercicio1 {
     while (index <= 53) {
         count = 0;
         aux = 1;
+        //Lógica para descobrir o número primo
+
         while (aux <= index) {
             if (index % aux == 0) {
                 count++
@@ -15,6 +17,7 @@ namespace exercicio1 {
             }
             aux++;
         }
+        
         if (count <= 2) {
             console.log(index)
         }
