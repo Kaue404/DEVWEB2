@@ -1,0 +1,21 @@
+button {
+    width: 39px;
+    height: 39px;
+    border: 1px solid white;
+    background-color: aquamarine;
+}
+
+.display {
+    display: flex;
+    justify-content: end;
+    border-radius: 100px;
+    background-color: aquamarine;
+}
+
+.calculadora {
+    width: 125px;
+}
+
+h1 {
+    font-family: monospace;
+}

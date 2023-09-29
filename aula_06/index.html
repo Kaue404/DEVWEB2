@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=" stylesheet" href="style.css">
     <title>Calculadora Vue.js com Botões</title>
 </head>
 
@@ -12,7 +13,9 @@
         <h1>Calculadora</h1>
 
         <div class="calculadora">
-            <input v-model="display" disabled>
+            <input v-model="display" disabled style="width:115px; background-color: white;">
+            <br>
+            <br>
             <div class="botoes">
                 <button @click="adicionarDigito('1')">1</button>
                 <button @click="adicionarDigito('2')">2</button>
@@ -22,26 +25,25 @@
             <button @click="adicionarDigito('4')">4</button>
             <button @click="adicionarDigito('5')">5</button>
             <button @click="adicionarDigito('6')">6</button>
+
+            <div class="botoes">
+                <button @click="adicionarDigito('7')">7</button>
+                <button @click="adicionarDigito('8')">8</button>
+                <button @click="adicionarDigito('9')">9</button>
+            </div>
+            <div class="botoes">
+                <button @click="adicionarDigito('0')">0</button>
+                <button @click="adicionarOperacao('+')">+</button>
+                <button @click="adicionarOperacao('-')">-</button>
+            </div>
+            <div class="botoes">
+                <button @click="adicionarOperacao('*')">*</button>
+                <button @click="adicionarOperacao('/')">/</button>
+                <button @click="calcularResultado()">=</button>
+            </div>
+            <div class="botoes"></div>
+            <button @click="limparDisplay()" style="margin-left: 43px;">C</button>
         </div>
-        <div class="botoes">
-            <button @click="adicionarDigito('7')">7</button>
-            <button @click="adicionarDigito('8')">8</button>
-            <button @click="adicionarDigito('9')">9</button>
-        </div>
-        <div class="botoes">
-            <button @click="adicionarDigito('0')">0</button>
-            <button @click="adicionarOperacao('+')">+</button>
-            <button @click="adicionarOperacao('-')">-</button>
-        </div>
-        <div class="botoes">
-            <button @click="adicionarOperacao('*')">*</button>
-            <button @click="adicionarOperacao('/')">/</button>
-            <button @click="calcularResultado()">=</button>
-        </div>
-        <div class="botoes"></div>
-        <button @click="limparDisplay()">C</button>
-    </div>
-    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
